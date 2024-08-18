@@ -19,7 +19,14 @@ def on_move(event):
 
 
 def phase_color(phase):
-    return plt.cm.RdYlBu((phase) / (np.pi))
+    colors = np.zeros((phase.shape[0], phase.shape[1], 3))
+    if m > 0:
+        colors[(phase >= 0) & (phase < np.pi)] = [0, 0, 1]  # Red
+        colors[(phase >= np.pi) & (phase < 2 * np.pi)] = [1, 0, 0]  # Blue
+    else:
+        colors[(phase >= 0) & (phase < np.pi)] = [1, 0, 0]  # Red
+        colors[(phase >= np.pi) & (phase < 2 * np.pi)] = [0, 0, 1]  # Blue
+    return colors
 
 
 def update_plot():
