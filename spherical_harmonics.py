@@ -7,7 +7,6 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationTool
 import tkinter as tk
 from tkinter import ttk
 from scipy.special import sph_harm
-import matplotlib.pyplot as plt
 
 
 def on_move(event):
