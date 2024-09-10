@@ -667,7 +667,7 @@ var_wn_long = tk.StringVar(root)
 var_wn_long.set(str(k_wave_long))
 spn_wn_long = tk.Spinbox(
     frm_wn, textvariable=var_wn_long, format='%.0f', from_=-10, to=10, increment=1,
-    command=lambda: set_k_wave_lat(var_wn_long.get()), width=3
+    command=lambda: set_k_wave_long(var_wn_long.get()), width=3
 )
 spn_wn_long.pack(anchor=tk.W)
 
